@@ -1,0 +1,286 @@
+class Sentences
+{
+	// Professor Wolfram
+	class over_here
+	{
+		customText = "Over here.";
+		conversation = "intro";
+		text = "";
+		speech[] = {"\dub\profStart\over_here.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class quick_we_dont_have_much_time
+	{
+		customText = "Quick, we don't have much time.";
+		conversation = "intro";
+		text = "";
+		speech[] = {"\dub\profStart\quick_we_dont_have_much_time.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class shhh_over_here
+	{
+		customText = "Shhh, over here.";
+		conversation = "intro";
+		text = "";
+		speech[] = {"\dub\profStart\shhh_over_here.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	
+	// Ambient
+	class go_away
+	{
+		ambient = 1;
+		customText = "Go away.";
+		text = "";
+		speech[] = {"\dub\ambient\go_away.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class go_away_or_i_will_hurt_you_you_got_that
+	{
+		ambient = 1;
+		customText = "Go away or I will hurt you. You got that?";
+		text = "";
+		speech[] = {"\dub\ambient\go_away_or_i_will_hurt_you_you_got_that.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class i_dont_know_you
+	{
+		ambient = 1;
+		customText = "I don't know you.";
+		text = "";
+		speech[] = {"\dub\ambient\i_dont_know_you.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class just_make_it_quick_alright
+	{
+		ambient = 1;
+		customText = "Just make it quick, alright?";
+		text = "";
+		speech[] = {"\dub\ambient\just_make_it_quick_alright.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class just_make_it_quick_ive_got_better_things_to_do
+	{
+		ambient = 1;
+		customText = "Just make it quick, I've got better things to do.";
+		text = "";
+		speech[] = {"\dub\ambient\just_make_it_quick_ive_got_better_things_to_do.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class leave_me_alone
+	{
+		ambient = 1;
+		customText = "Leave me alone.";
+		text = "";
+		speech[] = {"\dub\ambient\leave_me_alone.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class what_is_it
+	{
+		ambient = 1;
+		customText = "What is it?";
+		text = "";
+		speech[] = {"\dub\ambient\what_is_it.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class hey
+	{
+		ambient = 1;
+		customText = "Hey.";
+		text = "";
+		speech[] = {"\dub\ambient\hey.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class what_you_got
+	{
+		ambient = 1;
+		customText = "What do you got?";
+		text = "";
+		speech[] = {"\dub\ambient\what_you_got.ogg"};
+		actor = "MrCrazyDude115";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class a_hub_350_greet_player_ALP_0
+	{
+		ambient = 1;
+		customText = "Hey.";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epa\a_hub\350_greet_player\a_hub_350_greet_player_ALP_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class a_hub_350_greet_player_ALPB_0
+	{
+		ambient = 1;
+		customText = "Hey, man.";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epa\a_hub\350_greet_player\a_hub_350_greet_player_ALPB_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class a_hub_350_greet_player_BRA_0
+	{
+		ambient = 1;
+		customText = "Hello!";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epa\a_hub\350_greet_player\a_hub_350_greet_player_BRA_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class a_hub_350_greet_player_CHA_0
+	{
+		ambient = 1;
+		customText = "Hey.";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epa\a_hub\350_greet_player\a_hub_350_greet_player_CHA_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class b_hub_200_poi_abandonedbattlefield_01_GUA_0
+	{
+		ambient = 1;
+		customText = "What's it like out there?";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epb\B_hub\200_POI_AbandonedBattlefield_01\b_hub_200_poi_abandonedbattlefield_01_GUA_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class b_hub_200_poi_abandonedbattlefield_01_GUA_1
+	{
+		ambient = 1;
+		customText = "Any contact?";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epb\B_hub\200_POI_AbandonedBattlefield_01\b_hub_200_poi_abandonedbattlefield_01_GUA_1.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class b_hub_201_poi_abandonedbattlefield_02_GUA_0
+	{
+		ambient = 1;
+		customText = "Hey, are you okay, brother? What happened?";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epb\B_hub\201_POI_AbandonedBattlefield_02\b_hub_201_poi_abandonedbattlefield_02_GUA_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class b_hub_202_poi_abandonedbattlefield_03_GUA_0
+	{
+		ambient = 1;
+		customText = "Oh shit, I feel totally ruined!";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epb\B_hub\202_POI_AbandonedBattlefield_03\b_hub_202_poi_abandonedbattlefield_03_GUA_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class b_hub_204_poi_checkpoint_02_GUB_0
+	{
+		ambient = 1;
+		customText = "My friend, no offence, but you look like hell.";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epb\B_hub\204_POI_Checkpoint_02\b_hub_204_poi_checkpoint_02_GUB_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class b_hub_205_poi_checkpoint_03_GUA_1
+	{
+		ambient = 1;
+		customText = "What else?";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epb\B_hub\205_POI_Checkpoint_03\b_hub_205_poi_checkpoint_03_GUA_1.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class b_hub_209_poi_first_aid_01_GUA_0
+	{
+		ambient = 1;
+		customText = "You got a spare medic pack?";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epb\B_hub\209_POI_First_Aid_01\b_hub_209_poi_first_aid_01_GUA_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class b_hub_301_poi_abandoned_battlefield_02_player_KER_0
+	{
+		ambient = 1;
+		customText = "Christ! Must have been some firefight!";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epb\B_hub\301_POI_Abandoned_Battlefield_02_Player\b_hub_301_poi_abandoned_battlefield_02_player_KER_0.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+	class b_hub_081_b_hub_ambient_talk_SFB_1
+	{
+		ambient = 1;
+		customText = What?";
+		text = "";
+		speech[] = {"\a3\dubbing_f_epb\B_hub\081_B_HUB_Ambient_Talk\b_hub_081_b_hub_ambient_talk_SFB_1.ogg"};
+		actor = "BIS";
+		variant = "";
+		variantText = "";
+		class Arguments {};
+	};
+};
+
+class Arguments{};
+class Special{};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};

@@ -1,0 +1,614 @@
+#include "cfg\characterTemplates.hpp"
+#include "cfg\classnameTemplates.hpp"
+#include "cfg\defines.hpp"
+#include "cfg\factions.hpp"
+#include "cfg\functions.hpp"
+#include "cfg\hints.hpp"
+#include "cfg\insignias.hpp"
+#include "cfg\identities.hpp"
+#include "cfg\notifications.hpp"
+#include "cfg\gmg\genericMissions.hpp"
+
+#include "cfg\conv\dialogs.hpp"
+#include "cfg\laptop\dialogs.hpp"
+#include "cfg\params\dialogs.hpp"
+#include "cfg\shop\dialogs.hpp"
+#include "cfg\shop\meta.hpp"
+#include "cfg\shop\missions.hpp"
+#include "cfg\shop\personnel.hpp"
+#include "cfg\shop\weapons.hpp"
+#include "cfg\shop\magazines.hpp"
+#include "cfg\shop\items.hpp"
+#include "cfg\shop\uniforms.hpp"
+#include "cfg\shop\campEnhancements.hpp"
+#include "cfg\shop\campVehicles.hpp"
+#include "cfg\shop\stocks.hpp"
+
+#include "missionConversations\missionConversations.hpp"
+#include "missionConversations\sentences.bikb"
+
+enableDebugConsole = 1;
+author = "Surfer & IndeedPete"; // Author
+briefingName = "CO 04 CONTENTION ZONE";
+onLoadName = "CONTENTION ZONE"; // Mission name
+onLoadMission = "Welcome to the Zone..."; // Description
+loadScreen = "images\overview.paa"; // Preview picture
+overviewText = "Version: 0.50 ALPHA<br/><br/>The year is 2047. Eight years have passed since the small island of Altis became a nuclear battlefield, right on the borderline between Europe and the Middle East.<br/>Since then, the face of Altis has changed. The once blue skies are now covered with a thick toxic mist, the formerly fertile grounds suffer of radioactive contamination. And other even more deadly hazards have appeared. No one could tell if they have been accidents, intentionally created, or if they resulted from the heavy punishment of the island. Those who ran into them and survived called them anomalies.<br/>Soon after the war, a privately held organisation named CONTENTION stepped in and promised both help and recovery for the people on Altis. Tasked by the United Nations and provided with unlimited funding as well as the ability to engage the situation outside of any jurisdictions or independent supervision, CONTENTION started to deploy scientific and security staff on the island and established research centres and quarantine zones. Over the years these quarantine zones have been expanded to effectively cover the whole island and hundreds of square kilometres of sea around it. Altis has been locked down completely with only a handful of independent remainders, roaming the island, barely managing to survive.<br/><br/>They don't call this place Altis anymore. They call it CONTENTION ZONE.";
+overviewPicture = "images\overview.paa";
+disabledAI = true;
+
+class Header
+{
+	gameType = Coop; // MP mission type
+	minPlayers = 1;
+	maxPlayers = 4;
+};
+
+minScore = 0;
+avgScore = 1000;
+maxScore = 2000;
+respawnDelay = 10;
+respawn = "BASE";
+
+// Attributes
+rewardPerScan = 5;
+
+class Params
+{
+	#include "cfg\params\params.hpp"
+};
+
+class CfgDebriefing
+{
+class end1
+{
+title = "MISSION ACCOMPLISHED";
+//subtitle = "You did an great job!";
+//description = "You managed to destroy the missile system but the nuclear warhead was already removed.";
+//backgroundPicture = "CloseQuarters2.jpg";
+//picture = "b_inf";
+//pictureColor[] = {0.0,0.3,0.6,1};
+};
+};
+
+class CfgMusic
+{
+   tracks[] = {};
+
+
+    class S_helpme
+   {
+      name = "S_helpme";
+      sound[] = {music\S_helpme.ogg, db+0, 1.0};
+   };
+
+    class S_Xenomorph
+   {
+      name = "S_Xenomorph";
+      sound[] = {music\S_Xenomorph.ogg, db+0, 1.0};
+   };
+
+	class S_GetOut
+   {
+      name = "S_GetOut";
+      sound[] = {music\S_GetOut.ogg, db+0, 1.0};
+   };
+
+	class Noisy
+   {
+      name = "Noisy";
+      sound[] = {music\Noisy.ogg, db+0, 1.0};
+   };
+
+   class traumphase1
+   {
+      name = "traumphase1";
+      sound[] = {music\traumphase1.ogg, db+0, 1.0};
+   };
+
+   class PHASE1
+   {
+      name = "PHASE1";
+      sound[] = {music\PHASE1.ogg, db+0, 1.0};
+   };
+
+   class scorcher_theme
+   {
+      name = "scorcher_theme";
+      sound[] = {music\scorcher_theme.ogg, db+0, 1.0};
+   };
+
+
+   class LSD
+   {
+      name = "LSD";
+      sound[] = {music\LSD.ogg, db+0, 1.0};
+   };
+
+   class choirs
+   {
+      name = "choirs";
+      sound[] = {music\choirs.ogg, db+0, 1.0};
+   };
+
+};
+
+
+
+class CfgSounds
+{
+// List of sounds (.ogg files without the .ogg extension)
+sounds[] =  {acid1,acid2,acid3,Anomaly1,bark,bio,blowout,campfiremusic,chem,cough1,cough2,cough3,cough4,cough5,crow,Dripping,Dripping_Reverse,geiger,huh,longwind,mediumwind,military_alarm,owl,phonering,player_ahgh,player_argh,player_ergh,player_urgh,radioclick,rumble_ambience,S_Attack_Zombie_Long,S_Attack_Zombie_Short,S_death1,S_death2,S_death3,S_death4,S_Dog_death,S_Dog_Idle_bark,S_Dog_Idle_grrr,S_DogAttack,S_DogAttack_Long,S_DogAttack_Short,S_DogMoveToEnemy_Closer,S_DogMoveToEnemy_Far,S_Idle_Zombie_Hecheln,S_Idle_Zombie_Roechel,S_Idle_Zombie_Witterung,S_Idle_ZombieLeaving,S_MoveToEnemy_ZombieClosingIn,S_MoveToEnemy_ZombieFar,S_MoveToEnemy_ZombieVeryClose,seagull,shortwind,single_rumble,strongwind,Trip,windspace,wolff,birdy,crow2,distantthunder,doghowl,ghostwolf,basecamp,S_rain,S_deepsiren,S_drop,S_freezing};
+
+// Definition for each sound
+
+
+
+class acid1
+{
+		name = "acid1.ogg"; // Name for mission editor
+		sound[] = {\sounds\acid1.ogg, 0.8, 1.0};
+		titles[] = {0, ""};
+};
+class acid2
+{
+		name = "acid2.ogg"; // Name for mission editor
+		sound[] = {\sounds\acid2.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+class acid3
+{
+		name = "acid3.ogg"; // Name for mission editor
+		sound[] = {\sounds\acid3.ogg, 0.8, 1.0};
+		titles[] = {0, ""};
+};
+
+class Anomaly1
+{
+		name = "Anomaly1.ogg"; // Name for mission editor
+		sound[] = {\sounds\Anomaly1.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+
+class bark
+{
+name = "bark"; // Name for mission editor
+sound[] = {\sounds\bark.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class owl
+{
+name = "owl"; // Name for mission editor
+sound[] = {\sounds\owl.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class bio
+{
+name = "bio"; // Name for mission editor
+sound[] = {\sounds\bio.ogg, 0.6, 1.0};
+titles[] = {0, ""};
+};
+
+class blowout
+{
+		name = "blowout.ogg"; // Name for mission editor
+		sound[] = {\sounds\blowout.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+
+class campfiremusic
+{
+name = "campfiremusic"; // Name for mission editor
+sound[] = {\sounds\campfiremusic.ogg, 0.8, 1.0};
+titles[] = {0, ""};
+};
+
+class chem
+{
+name = "chem"; // Name for mission editor
+sound[] = {\sounds\chem.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class cough1
+{
+name = "cough1"; // Name for mission editor
+sound[] = {\sounds\cough1.ogg, 1, 1};
+titles[] = {0, ""};
+};
+
+class cough2
+{
+name = "cough2"; // Name for mission editor
+sound[] = {\sounds\cough2.ogg, 1, 1};
+titles[] = {0, ""};
+};
+
+class cough3
+{
+name = "cough3"; // Name for mission editor
+sound[] = {\sounds\cough3.ogg, 1, 1};
+titles[] = {0, ""};
+};
+
+class cough4
+{
+name = "cough4"; // Name for mission editor
+sound[] = {\sounds\cough4.ogg, 1, 1};
+titles[] = {0, ""};
+};
+
+class cough5
+{
+name = "cough5"; // Name for mission editor
+sound[] = {\sounds\cough5.ogg, 1, 1};
+titles[] = {0, ""};
+};
+
+class crow
+{
+name = "crow"; // Name for mission editor
+sound[] = {\sounds\crow.ogg, 0.4, 1.0};
+titles[] = {0, ""};
+};
+
+class Dripping
+{
+		name = "Dripping.ogg"; // Name for mission editor
+		sound[] = {\sounds\Dripping.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+
+class Dripping_Reverse
+{
+		name = "Dripping_Reverse.ogg"; // Name for mission editor
+		sound[] = {\sounds\Dripping_Reverse.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+
+class geiger
+{
+name = "geiger"; // Name for mission editor
+sound[] = {\sounds\geiger.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class huh
+{
+name = "huh"; // Name for mission editor
+sound[] = {\sounds\huh.ogg, 0.5, 1.0};
+titles[] = {0, ""};
+};
+
+class longwind
+{
+name = "longwind"; // Name for mission editor
+sound[] = {\sounds\longwind.ogg, 0.8, 1.0};
+titles[] = {0, ""};
+};
+
+class mediumwind
+{
+name = "mediumwind"; // Name for mission editor
+sound[] = {\sounds\mediumwind.ogg, 0.8, 1.0};
+titles[] = {0, ""};
+};
+
+class military_alarm
+{
+name = "military_alarm"; // Name for mission editor
+sound[] = {\sounds\military_alarm.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class phonering
+{
+name = "phonering"; // Name for mission editor
+sound[] = {\sounds\phonering.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class player_ahgh
+{
+		name = "player_ahgh.ogg"; // Name for mission editor
+		sound[] = {\sounds\player_ahgh.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+class player_argh
+{
+		name = "player_argh.ogg"; // Name for mission editor
+		sound[] = {\sounds\player_argh.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+class player_ergh
+{
+		name = "player_ergh.ogg"; // Name for mission editor
+		sound[] = {\sounds\player_ergh.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+class player_urgh
+{
+		name = "player_urgh.ogg"; // Name for mission editor
+		sound[] = {\sounds\player_urgh.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+
+class radioclick
+{
+name = "radioclick"; // Name for mission editor
+sound[] = {\sounds\radioclick.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_Attack_Zombie_Long
+{
+name = "S_Attack_Zombie_Long"; // Name for mission editor
+sound[] = {\sounds\S_Attack_Zombie_Long.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_Attack_Zombie_Short
+{
+name = "S_Attack_Zombie_Short"; // Name for mission editor
+sound[] = {\sounds\S_Attack_Zombie_Short.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_death1
+{
+name = "S_death1"; // Name for mission editor
+sound[] = {\sounds\S_death1.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_death2
+{
+name = "S_death2"; // Name for mission editor
+sound[] = {\sounds\S_death2.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_death3
+{
+name = "S_death3"; // Name for mission editor
+sound[] = {\sounds\S_death3.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_death4
+{
+name = "S_death4"; // Name for mission editor
+sound[] = {\sounds\S_death4.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_Dog_death
+{
+name = "S_Dog_death"; // Name for mission editor
+sound[] = {\sounds\S_Dog_death.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_Dog_Idle_bark
+{
+name = "S_Dog_Idle_bark"; // Name for mission editor
+sound[] = {\sounds\S_Dog_Idle_bark.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_Dog_Idle_grrr
+{
+name = "S_Dog_Idle_grrr"; // Name for mission editor
+sound[] = {\sounds\S_Dog_Idle_grrr.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_DogAttack
+{
+name = "S_DogAttack"; // Name for mission editor
+sound[] = {\sounds\S_DogAttack.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_DogAttack_Long
+{
+name = "S_DogAttack_Long"; // Name for mission editor
+sound[] = {\sounds\S_DogAttack_Long.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_DogAttack_Short
+{
+name = "S_DogAttack_Short"; // Name for mission editor
+sound[] = {\sounds\S_DogAttack_Short.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_DogMoveToEnemy_Closer
+{
+name = "S_DogMoveToEnemy_Closer"; // Name for mission editor
+sound[] = {\sounds\S_DogMoveToEnemy_Closer.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_DogMoveToEnemy_Far
+{
+name = "S_DogMoveToEnemy_Far"; // Name for mission editor
+sound[] = {\sounds\S_DogMoveToEnemy_Far.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_Idle_Zombie_Hecheln
+{
+name = "S_Idle_Zombie_Hecheln"; // Name for mission editor
+sound[] = {\sounds\S_Idle_Zombie_Hecheln.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_Idle_Zombie_Roechel
+{
+name = "S_Idle_Zombie_Roechel"; // Name for mission editor
+sound[] = {\sounds\S_Idle_Zombie_Roechel.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_Idle_Zombie_Witterung
+{
+name = "S_Idle_Zombie_Witterung"; // Name for mission editor
+sound[] = {\sounds\S_Idle_Zombie_Witterung.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_Idle_ZombieLeaving
+{
+name = "S_Idle_ZombieLeaving"; // Name for mission editor
+sound[] = {\sounds\S_Idle_ZombieLeaving.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_MoveToEnemy_ZombieClosingIn
+{
+name = "S_MoveToEnemy_ZombieClosingIn"; // Name for mission editor
+sound[] = {\sounds\S_MoveToEnemy_ZombieClosingIn.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_MoveToEnemy_ZombieFar
+{
+name = "S_MoveToEnemy_ZombieFar"; // Name for mission editor
+sound[] = {\sounds\S_MoveToEnemy_ZombieFar.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_MoveToEnemy_ZombieVeryClose
+{
+name = "S_MoveToEnemy_ZombieVeryClose"; // Name for mission editor
+sound[] = {\sounds\S_MoveToEnemy_ZombieVeryClose.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class seagull
+{
+name = "seagull"; // Name for mission editor
+sound[] = {\sounds\seagull.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class shortwind
+{
+name = "shortwind"; // Name for mission editor
+sound[] = {\sounds\shortwind.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class single_rumble
+{
+name = "single_rumble"; // Name for mission editor
+sound[] = {\sounds\single_rumble.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class strongwind
+{
+name = "strongwind"; // Name for mission editor
+sound[] = {\sounds\strongwind.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class trip
+{
+		name = "trip.ogg"; // Name for mission editor
+		sound[] = {\sounds\trip.ogg, 1, 1.0};
+		titles[] = {0, ""};
+};
+
+class windspace
+{
+name = "windspace"; // Name for mission editor
+sound[] = {\sounds\windspace.ogg, 0.5, 1.0};
+titles[] = {0, ""};
+};
+
+class wolff
+{
+name = "wolff"; // Name for mission editor
+sound[] = {\sounds\wolff.ogg, 0.5, 1.0};
+titles[] = {0, ""};
+};
+
+
+class birdy
+{
+name = "birdy"; // Name for mission editor
+sound[] = {\sounds\birdy.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class crow2
+{
+name = "crow2"; // Name for mission editor
+sound[] = {\sounds\crow2.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class distantthunder
+{
+name = "distantthunder"; // Name for mission editor
+sound[] = {\sounds\distantthunder.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class doghowl
+{
+name = "doghowl"; // Name for mission editor
+sound[] = {\sounds\doghowl.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class ghostwolf
+{
+name = "ghostwolf"; // Name for mission editor
+sound[] = {\sounds\ghostwolf.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+
+class basecamp
+{
+name = "basecamp"; // Name for mission editor
+sound[] = {\sounds\basecamp.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+
+class S_rain
+{
+name = "S_rain"; // Name for mission editor
+sound[] = {\sounds\S_rain.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+
+class S_deepsiren
+{
+name = "S_deepsiren"; // Name for mission editor
+sound[] = {\sounds\S_deepsiren.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_drop
+{
+name = "S_drop"; // Name for mission editor
+sound[] = {\sounds\S_drop.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+
+class S_freezing
+{
+name = "S_freezing"; // Name for mission editor
+sound[] = {\sounds\S_freezing.ogg, 1, 1.0};
+titles[] = {0, ""};
+};
+};

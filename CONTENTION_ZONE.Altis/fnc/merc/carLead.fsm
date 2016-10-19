@@ -1,0 +1,245 @@
+/*%FSM<COMPILE "D:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Lead">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start",0,250,-175.000000,-150.000000,-75.000000,-100.000000,0.000000,"Start"};
+item1[] = {"Init",4,218,-175.000000,-75.000000,-75.000000,-25.000000,0.000000,"Init"};
+item2[] = {"Set_WP",2,250,-175.000000,0.000000,-75.000000,50.000000,0.000000,"Set WP"};
+item3[] = {"Killed___Disemba",4,218,-175.000000,225.000000,-75.000000,275.000000,3.000000,"Killed / Disembark"};
+item4[] = {"End",1,4346,-175.000000,300.000000,-75.000000,350.000000,0.000000,"End"};
+item5[] = {"True",8,218,-175.000000,75.000000,-75.000000,125.000000,0.000000,"True"};
+item6[] = {"Idle___Driving",2,250,-175.000000,150.000000,-75.000000,200.000000,0.000000,"Idle / Driving"};
+item7[] = {"Fine",4,218,-300.000000,150.000000,-200.000000,200.000000,0.000000,"Fine"};
+item8[] = {"Drive_Normal",2,250,-425.000000,150.000000,-325.000000,200.000000,0.000000,"Drive Normal"};
+item9[] = {"",7,210,-379.000000,96.000000,-371.000000,104.000000,0.000000,""};
+item10[] = {"",7,210,-3.999998,171.000000,3.999998,179.000000,0.000000,""};
+item11[] = {"Too_Slow",4,218,-50.000000,225.000000,50.000000,275.000000,1.000000,"Too Slow"};
+item12[] = {"",7,210,121.000000,171.000000,129.000000,179.000000,0.000000,""};
+item13[] = {"Stopped",4,218,75.000000,225.000000,175.000000,275.000000,2.000000,"Stopped"};
+item14[] = {"Slow_Down",2,250,-50.000000,300.000000,50.000000,350.000000,0.000000,"Slow Down"};
+item15[] = {"",7,210,-3.999999,396.000000,3.999999,404.000000,0.000000,""};
+item16[] = {"",7,210,120.999992,396.000000,129.000000,404.000000,0.000000,""};
+item17[] = {"",7,210,246.000000,396.000000,254.000000,404.000000,0.000000,""};
+item18[] = {"",7,210,246.000000,96.000000,254.000000,104.000000,0.000000,""};
+item19[] = {"Full_Stop",2,250,75.000000,300.000000,175.000000,350.000000,0.000000,"Full Stop"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,5};
+link3[] = {3,4};
+link4[] = {5,6};
+link5[] = {6,3};
+link6[] = {6,7};
+link7[] = {6,10};
+link8[] = {7,8};
+link9[] = {8,9};
+link10[] = {9,5};
+link11[] = {10,11};
+link12[] = {10,12};
+link13[] = {11,14};
+link14[] = {12,13};
+link15[] = {13,19};
+link16[] = {14,15};
+link17[] = {15,16};
+link18[] = {16,17};
+link19[] = {17,18};
+link20[] = {18,5};
+link21[] = {19,16};
+globals[] = {25.000000,1,0,0,0,640,480,1,140,6316128,1,-507.066620,267.398529,465.112793,-300.957031,737,730,1};
+window[] = {2,-1,-1,-1,-1,785,26,1466,26,3,755};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "Lead";
+  class States
+  {
+    /*%FSM<STATE "Start">*/
+    class Start
+    {
+      name = "Start";
+      init = /*%FSM<STATEINIT""">*/"_leader = [_this, 0, objNull, [objNull]] call BIS_fnc_param;" \n
+       "_destination = [_this, 1, [], [[]]] call BIS_fnc_param;" \n
+       "_waitFor = [_this, 2, [], [[]]] call BIS_fnc_param;" \n
+       "_slowDistance = [_this, 3, 100, [0]] call BIS_fnc_param;" \n
+       "_stopDistance = [_this, 4, 200, [0]] call BIS_fnc_param;" \n
+       "_slowSpeed = [_this, 5, 50, [0]] call BIS_fnc_param;" \n
+       "_normalSpeed = [_this, 6, 100, [0]] call BIS_fnc_param;" \n
+       "" \n
+       "_grp = group _leader;" \n
+       "_count = count _waitFor;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Init">*/
+        class Init
+        {
+          priority = 0.000000;
+          to="Set_WP";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"vehicle _leader != _leader"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Set_WP">*/
+    class Set_WP
+    {
+      name = "Set_WP";
+      init = /*%FSM<STATEINIT""">*/"//_leader stop true;" \n
+       "_leader limitSpeed 0;" \n
+       "_vehicle = vehicle _leader;" \n
+       "_wp = _grp addWaypoint [_destination, 0];" \n
+       "_wp setWaypointType ""MOVE"";" \n
+       "[_grp, 0] setWaypointBehaviour ""SAFE"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          priority = 0.000000;
+          to="Idle___Driving";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "End">*/
+    class End
+    {
+      name = "End";
+      init = /*%FSM<STATEINIT""">*/"if (IP_TESTMODE) then {hint ""Lead FSM Terminated""};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Idle___Driving">*/
+    class Idle___Driving
+    {
+      name = "Idle___Driving";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Killed___Disemba">*/
+        class Killed___Disemba
+        {
+          priority = 3.000000;
+          to="End";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!alive _leader) OR (vehicle _leader == _leader) OR (!canMove _vehicle)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Stopped">*/
+        class Stopped
+        {
+          priority = 2.000000;
+          to="Full_Stop";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"({(isNull(driver _x)) OR (!isEngineOn _x) OR (!canMove _x) OR (_vehicle distance _x > _stopDistance)} count _waitFor > 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Too_Slow">*/
+        class Too_Slow
+        {
+          priority = 1.000000;
+          to="Slow_Down";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"({(!(isNull(driver _x))) && (isEngineOn _x) && (canMove _x) && (_vehicle distance _x > _slowDistance)} count _waitFor > 0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Fine">*/
+        class Fine
+        {
+          priority = 0.000000;
+          to="Drive_Normal";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"({(!(isNull(driver _x))) && (isEngineOn _x) && (canMove _x) && (_vehicle distance _x <= _slowDistance)} count _waitFor == _count)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Drive_Normal">*/
+    class Drive_Normal
+    {
+      name = "Drive_Normal";
+      init = /*%FSM<STATEINIT""">*/"_vehicle limitSpeed _normalSpeed;" \n
+       "if (IP_TESTMODE) then {hintSilent (""Lead FSM\nIP_Car speed limit: "" + str(_normalSpeed))};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          priority = 0.000000;
+          to="Idle___Driving";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Slow_Down">*/
+    class Slow_Down
+    {
+      name = "Slow_Down";
+      init = /*%FSM<STATEINIT""">*/"_vehicle limitSpeed _slowSpeed;" \n
+       "if (IP_TESTMODE) then {hintSilent (""Lead FSM\nIP_Car speed limit: "" + str(_slowSpeed))};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          priority = 0.000000;
+          to="Idle___Driving";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Full_Stop">*/
+    class Full_Stop
+    {
+      name = "Full_Stop";
+      init = /*%FSM<STATEINIT""">*/"_vehicle  limitSpeed 0;" \n
+       "if (IP_TESTMODE) then {hintSilent ""Lead FSM\nIP_Car speed limit: 0""};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          priority = 0.000000;
+          to="Idle___Driving";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "End",
+  };
+};
+/*%FSM</COMPILE>*/
