@@ -63,7 +63,7 @@ _this spawn {
 	[_actionParams, "addAction", _ownerGrp] call BIS_fnc_MP;
 
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to find his assistant. He was supposed to take the coastal dirt road from Stavros. Find him and then return to " + _agentName + " to receive 50 Euro."), "Missing Assistant", _agentName], nil, true, 1];
+	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to find his assistant. He was supposed to take the coastal dirt road from Stavros. Find him and then return to " + _agentName + " to receive 50 Euro."), "Missing Assistant", _agentName], nil, true, 1, true, "search"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;
 	
 	if !(isDedicated) then {

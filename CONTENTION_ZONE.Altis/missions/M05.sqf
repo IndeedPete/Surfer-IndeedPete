@@ -24,7 +24,7 @@ _this spawn {
 	}; 
 
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to kill a pack of zombie wolfs at the old diesel power plant on grid " + (mapGridPosition _centre) + ". Once the wolves are dead return to " + _agentName + " and receive 100 Euro."), "Wolfpack", _agentName], nil, true, 1];
+	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to kill a pack of zombie wolfs at the old diesel power plant on grid " + (mapGridPosition _centre) + ". Once the wolves are dead return to " + _agentName + " and receive 100 Euro."), "Wolfpack", _agentName], nil, true, 1, true, "attack"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;
 	
 	waitUntil {({(alive _x) && (_x distance _centre < 500)} count _dogs == 0) OR CHECK};

@@ -9,8 +9,7 @@ class Factions
     {
         displayName = "Altis Armed Forces";
 		displayNameShort = "AAF";
-    };
-	
+    };	
 	class BlackArrow
     {
         blacklistUniforms[] = {"U_Competitor", "U_B_CTRG_1", "U_B_CTRG_2", "U_B_CTRG_3", "U_I_G_resistanceLeader_F", "U_B_Wetsuit"};
@@ -56,15 +55,18 @@ class Factions
 				displayNameShort = "Managing Partner";
 			};
 		};
-    };
-	
+    };	
 	class Contention
     {
         displayName = "CONTENTION";
 		displayNameShort = "CONTENTION";
 		enemyFactions[] = {"Freezoners", "Zombies"};
 	};
-	
+	class China
+    {
+        displayName = "People's Republic of China";
+		displayNameShort = "China";
+	};
 	class CSAT
     {
         displayName = "Canton Protocol Strategic Alliance Treaty";
@@ -116,8 +118,8 @@ class Factions
     };
 	class EF
     {
-        displayName = "European Federation";
-		displayNameShort = "EF";
+        displayName = "Europe";//"European Federation";
+		displayNameShort = "Europe";//"EF";
     };
     class EFMil
     {

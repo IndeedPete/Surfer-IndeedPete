@@ -217,7 +217,6 @@ _this spawn {
 			_flrObj = _inFREEZER getVariable ["SURF_FlareObject", ObjNull];
 			_flrObj2 = _inFREEZER getVariable ["SURF_FlareObject2", ObjNull];
 
-
 			if (isNull _flrObj) then {
 
 				enableCamShake true;

@@ -350,10 +350,10 @@ class IP_DLG_AMOUNT
 		{
 			idc = -1;
 			text = ""; //--- ToDo: Localize;
-			x = 7 * GUI_GRID_W + GUI_GRID_X;
-			y = 7 * GUI_GRID_H + GUI_GRID_Y;
-			w = 26 * GUI_GRID_W;
-			h = 11 * GUI_GRID_H;
+			x = 0.365937 * safezoneW + safezoneX;
+			y = 0.379 * safezoneH + safezoneY;
+			w = 0.268125 * safezoneW;
+			h = 0.242 * safezoneH;
 		};
 	
 		////////////////////////////////////////////////////////

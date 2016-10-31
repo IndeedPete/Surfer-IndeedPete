@@ -14,7 +14,7 @@ _this spawn {
 	[{player action ["lightOn", deadtruck]}, "BIS_fnc_spawn", _ownerGrp, true] call BIS_fnc_MP;
 	
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to talk to the Gravedigger. He runs a crematory at grid " + (mapGridPosition _gravediggerPos) + "."), "The Gravedigger", _agentName], nil, true, 1];
+	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to talk to the Gravedigger. He runs a crematory at grid " + (mapGridPosition _gravediggerPos) + "."), "The Gravedigger", _agentName], nil, true, 1, true, "kill"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;
 	
 	waitUntil {(_ownerGrp getVariable ["IP_M02_QuestDone", false]) OR CHECK};

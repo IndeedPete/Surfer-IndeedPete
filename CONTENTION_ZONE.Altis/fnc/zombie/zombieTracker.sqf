@@ -1,4 +1,4 @@
-if (!isServer) exitWith {};
+if !(isServer) exitWith {};
 
 private ["_spawnDistance", "_side", "_animalRatio", "_skillRange", "_newlogics", "_cycle", "_oldLogics"];
 _spawnDistance = [_this, 0, 1500, [0]] call BIS_fnc_param;
@@ -10,6 +10,9 @@ _oldLogics = [];
 
 if (!isNil "IP_ZombieTrackerRunning") exitWith {["Tracker already running, script terminated."] call BIS_fnc_error};
 IP_ZombieTrackerRunning = true;
+
+// Temporary Solution?
+waitUntil {!(isNil "IP_AvailableItems") && !(isNil "IP_AvailableUniforms")};
 
 while {true} do {	
 	_newlogics = [];

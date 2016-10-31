@@ -1,8 +1,8 @@
 class ShopMetaInformation
 {
 	basicCostRate = 0;
-	currency = "Euro";
-	currencyShort = "€";
+	currency = "ZoneCreds";
+	currencyShort = "Z";
 	defaultBuildTime = 0;
 	defaultPicture = "images\defaultAvatar.jpg";
 	sellingDisvisor = 5;

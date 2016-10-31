@@ -13,7 +13,7 @@ _this spawn {
 	_ownerGrp setVariable ["IP_MDocNeed_Started", true, true];
 
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [("Bring a Medikit to " + _agentName + " and receive " + _rewardStr + " Euro."), "Doctor In Need", _agentName], _agentPos, true, 1],
+	_taskParams = [_ownerGrp, _task, [("Bring a Medikit to " + _agentName + " and receive " + _rewardStr + " Euro."), "Doctor In Need", _agentName], _agentPos, true, 1, true, "heal"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;	
 		
 	waitUntil {(_ownerGrp getVariable ["IP_MDocNeed_QuestDone", false]) OR CHECK};

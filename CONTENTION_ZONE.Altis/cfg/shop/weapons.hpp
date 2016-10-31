@@ -20,6 +20,8 @@ class ShopWeapons
 		};
 		class Laserdesignator_02: Laserdesignator {};
 		class Laserdesignator_03: Laserdesignator {};
+		class Laserdesignator_02_ghex_F: Laserdesignator {};
+		class Laserdesignator_01_khk_F: Laserdesignator {};
 	};
 	
 	class Pistols
@@ -34,11 +36,17 @@ class ShopWeapons
 			price = 250;
 			show = 0;
 		};
+		class hgun_Pistol_01_F
+		{
+			origin = "Russia";
+			price = 400;
+		};
 		class hgun_P07_F
 		{
 			origin = "EF";
 			price = 500;
 		};
+		class hgun_P07_khk_F: hgun_P07_F {};
 		class hgun_Rook40_F
 		{
 			origin = "Russia";
@@ -72,6 +80,11 @@ class ShopWeapons
 			price = 1500;
 		};
 		class SMG_02_F
+		{
+			origin = "EF";
+			price = 1500;
+		};
+		class SMG_05_F
 		{
 			origin = "EF";
 			price = 1500;
@@ -138,6 +151,11 @@ class ShopWeapons
 		};
 		class arifle_Mk20C_plain_F: arifle_Mk20C_F {};
 		class IP_arifle_Mk20C_FBlack: arifle_Mk20C_F {};
+		class arifle_AKS_F
+		{
+			origin = "Russia";
+			price = 3000;
+		};
 		class hlc_rifle_aks74u
 		{
 			origin = "Russia";
@@ -210,6 +228,7 @@ class ShopWeapons
 			price = 4000;
 		};
 		class arifle_MXC_Black_F: arifle_MXC_F {};
+		class arifle_MXC_khk_F: arifle_MXC_F {};
 		class IP_arifle_MXC_sand_F
 		{
 			merc = 0;
@@ -242,6 +261,11 @@ class ShopWeapons
 		basePrice = 3000;
 		displayName = "Rifles";
 		
+		class arifle_AKM_F
+		{
+			origin = "Russia";
+			price = 3000;
+		};
 		class hlc_rifle_ak47
 		{
 			origin = "Russia";
@@ -269,6 +293,13 @@ class ShopWeapons
 			price = 3500;
 		};
 		class arifle_Mk20_F: arifle_Mk20_plain_F {};
+		class arifle_SPAR_01_blk_F
+		{
+			origin = "Germany";
+			price = 3500;
+		};
+		class arifle_SPAR_01_khk_F: arifle_SPAR_01_blk_F {};
+		class arifle_SPAR_01_snd_F: arifle_SPAR_01_blk_F {};
 		class IP_arifle_Mk20_FBlack: arifle_Mk20_plain_F {};
 		class hlc_rifle_STG58F
 		{
@@ -409,10 +440,20 @@ class ShopWeapons
 		};
 		class hlc_rifle_auga3_bl: hlc_rifle_auga3 {};
 		class hlc_rifle_auga3_b: hlc_rifle_auga3 {};
+		class arifle_CTAR_blk_F
+		{
+			origin = "China";
+			price = 4000;
+		};		
 		class hlc_rifle_aek971
 		{
 			origin = "Russia";
 			price = 4000;
+		};
+		class arifle_AK12_F
+		{
+			origin = "Russia";
+			price = 4500;
 		};
 		class hlc_rifle_ak12
 		{
@@ -430,6 +471,7 @@ class ShopWeapons
 			price = 5000;
 		};
 		class arifle_MX_black_F: arifle_MX_F {};
+		class arifle_MX_khk_F: arifle_MX_F {};
 		class IP_arifle_MX_sand_F
 		{
 			origin = "EF";
@@ -488,6 +530,13 @@ class ShopWeapons
 		};
 		class arifle_Mk20_GL_F: arifle_Mk20_GL_plain_F {};
 		class IP_arifle_Mk20_GL_FBlack: arifle_Mk20_GL_plain_F {};
+		class arifle_SPAR_01_GL_blk_F
+		{
+			origin = "Germany";
+			price = 4000;
+		};
+		class arifle_SPAR_01_GL_khk_F: arifle_SPAR_01_GL_blk_F {};
+		class arifle_SPAR_01_GL_snd_F: arifle_SPAR_01_GL_blk_F {};
 		class hlc_rifle_auga3_GL
 		{
 			origin = "Austria";
@@ -520,6 +569,16 @@ class ShopWeapons
 			origin = "USA";
 			price = 4000;
 		};
+		class arifle_CTAR_GL_blk_F
+		{
+			origin = "China";
+			price = 4500;
+		};
+		class arifle_AK12_GL_F
+		{
+			origin = "Russia";
+			price = 5500;
+		};
 		class hlc_rifle_ak12GL
 		{
 			origin = "Russia";
@@ -536,6 +595,7 @@ class ShopWeapons
 			price = 6000;
 		};
 		class arifle_MX_GL_black_F: arifle_MX_GL_F {};
+		class arifle_MX_GL_khk_F: arifle_MX_GL_F {};
 		class IP_arifle_MX_GL_sand_F
 		{
 			origin = "EF";
@@ -554,6 +614,13 @@ class ShopWeapons
 		class IP_arifle_MX_GL_Snow_F: IP_arifle_MX_GL_White_F {};
 		class IP_arifle_MX_GL_Black_F: IP_arifle_MX_GL_sand_F {};
 		class IP_arifle_MX_GL_Black_Digi_F: IP_arifle_MX_GL_sand_F {};
+		class arifle_ARX_blk_F
+		{
+			origin = "China";
+			price = 6500;
+		};
+		class arifle_ARX_ghex_F: arifle_ARX_blk_F {};
+		class arifle_ARX_hex_F: arifle_ARX_blk_F {};
 	};
 	
 	class LMG
@@ -561,6 +628,18 @@ class ShopWeapons
 		basePrice = 5000;
 		displayName = "L/MGs";
 		
+		class arifle_SPAR_02_blk_F
+		{
+			origin = "Germany";
+			price = 4500;
+		};
+		class arifle_SPAR_02_khk_F: arifle_SPAR_02_blk_F {};
+		class arifle_SPAR_02_snd_F: arifle_SPAR_02_blk_F {};
+		class arifle_CTARS_blk_F
+		{
+			origin = "China";
+			price = 5000;
+		};
 		class hlc_rifle_rpk
 		{
 			origin = "Russia";
@@ -570,6 +649,11 @@ class ShopWeapons
 		{
 			origin = "Russia";
 			price = 5500;
+		};
+		class LMG_03_F
+		{
+			origin = "USA";
+			price = 6000;
 		};		
 		class hlc_lmg_minimipara
 		{
@@ -590,6 +674,7 @@ class ShopWeapons
 			price = 6000;
 		};
 		class arifle_MX_SW_black_F: arifle_MX_SW_F {};
+		class arifle_MX_SW_khk_F: arifle_MX_SW_F {};
 		class IP_arifle_MX_SW_sand_F
 		{
 			origin = "EF";
@@ -668,12 +753,20 @@ class ShopWeapons
 			origin = "USA";
 			price = 4000;
 		};
+		class srifle_DMR_07_blk_F
+		{
+			origin = "China";
+			price = 5500;
+		};
+		class srifle_DMR_07_ghex_F: srifle_DMR_07_blk_F {};
+		class srifle_DMR_07_hex_F: srifle_DMR_07_blk_F {};
 		class arifle_MXM_F
 		{
 			origin = "USA";
 			price = 6000;
 		};
 		class arifle_MXM_Black_F: arifle_MXM_F {};
+		class arifle_MXM_khk_F: arifle_MXM_F {};
 		class IP_arifle_MXM_sand_F
 		{
 			origin = "EF";
@@ -733,6 +826,13 @@ class ShopWeapons
 			origin = "USA";
 			price = 7000;
 		};
+		class arifle_SPAR_03_blk_F
+		{
+			origin = "Germany";
+			price = 6500;
+		};
+		class arifle_SPAR_03_khk_F: arifle_SPAR_03_blk_F {};
+		class arifle_SPAR_03_snd_F: arifle_SPAR_03_blk_F {};
 		class srifle_DMR_03_F
 		{
 			origin = "EF";
@@ -820,12 +920,14 @@ class ShopWeapons
 			price = 10000;
 		};
 		class srifle_GM6_camo_F: srifle_GM6_F {};
+		class srifle_GM6_ghex_F: srifle_GM6_F {};
 		class srifle_LRR_F
 		{
 			origin = "USA";
 			price = 10000;
 		};
 		class srifle_LRR_camo_F: srifle_LRR_F {};
+		class srifle_LRR_tna_F: srifle_LRR_F {};
 	};
 	
 	class Launchers

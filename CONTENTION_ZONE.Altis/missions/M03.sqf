@@ -87,7 +87,7 @@ _this spawn {
 	IP_M03_Truck allowDamage true;
 	
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to take the truck behind the crematory. Then drive to grid " + (mapGridPosition _deadPos) + ", load up the five dead " + getText(missionConfigFile >> "Factions" >> "Freezoners" >> "displayName") + " and return to " + _agentName + ". The mission will fail if the truck gets destroyed."), "Corpse Express", _agentName], nil, true, 1];
+	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to take the truck behind the crematory. Then drive to grid " + (mapGridPosition _deadPos) + ", load up the five dead " + getText(missionConfigFile >> "Factions" >> "Freezoners" >> "displayName") + " and return to " + _agentName + ". The mission will fail if the truck gets destroyed."), "Corpse Express", _agentName], nil, true, 1, true, "kill"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;
 	
 	waitUntil {{_x getVariable ['IP_InTuck', false]} count IP_M03_DeadBodies == count IP_M03_DeadBodies};	

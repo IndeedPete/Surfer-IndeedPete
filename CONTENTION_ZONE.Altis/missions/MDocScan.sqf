@@ -15,7 +15,7 @@ _this spawn {
 	{_x addItem "MineDetector"} forEach (units _ownerGrp);
 
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to scan the anomalies BIO, CHEM, RAD, FREEZER, BLASTER and TRIP! Enter a safe zone of an anomaly to scan it! This mission stays persistent, i.e. you can scan as many anomalies as there are in the Zone."), "Scan Anomalies (Persistent)", _agentName], nil, true, 1];
+	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to scan the anomalies BIO, CHEM, RAD, FREEZER, BLASTER and TRIP! Enter a safe zone of an anomaly to scan it! This mission stays persistent, i.e. you can scan as many anomalies as there are in the Zone."), "Scan Anomalies (Persistent)", _agentName], nil, true, 1, true, "radio"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;
 	
 	while {!CHECK} do {

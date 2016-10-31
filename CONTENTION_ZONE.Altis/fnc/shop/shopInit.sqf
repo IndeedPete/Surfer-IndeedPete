@@ -42,8 +42,11 @@ if ((count _this > 5) && {!isDedicated} && {isNull(player getVariable ["IP_ShopB
 		_pos = _boxParams param [1, [0,0,0], [[]], 3];
 		_dir = _boxParams param [2, 0, [0]];
 		_box = _class createVehicleLocal _pos;
+		_box enableSimulation false;
+		_box allowDamage false;
 		_box setPosATL _pos;
 		_box setDir _dir;
+		_box enableSimulation true;
 		_box 
 	} else {
 		_boxParams

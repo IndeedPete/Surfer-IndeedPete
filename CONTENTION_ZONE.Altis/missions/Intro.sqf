@@ -11,7 +11,7 @@ _this spawn {
 	[{[player, "ghostStartOpener"] call IP_fnc_removeConversation}, "BIS_fnc_spawn", _ownerGrp, true] call BIS_fnc_MP;
 	
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [("Escape from this place! Once you're outside, go south until you reach 'Surfer's Scrapyard' on grid " + (mapGridPosition _agentPos) + ". Talk to the local dealer with the name of " + _agentName + "."), "Breakout", _agentName], nil, true, 1];
+	_taskParams = [_ownerGrp, _task, [("Escape from this place! Once you're outside, go south until you reach 'Surfer's Scrapyard' on grid " + (mapGridPosition _agentPos) + ". Talk to the local dealer with the name of " + _agentName + "."), "Breakout", _agentName], nil, true, 1, true, "run"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;
 	
 	S_waitingheli allowDamage false;

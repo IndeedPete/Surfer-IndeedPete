@@ -60,10 +60,25 @@ class ShopItems
 		};
 		class NVGoggles_INDEP: NVGoggles {};
 		class NVGoggles_OPFOR: NVGoggles {};
+		class NVGoggles_tna_F: NVGoggles {};
 		class IP_NVGoggles_SNW: NVGoggles
 		{
 			show = 0;
 		};
+		class O_NVGoggles_ghex_F
+		{
+			price = 2000;
+			show = 1;
+		};
+		class O_NVGoggles_hex_F: O_NVGoggles_ghex_F {};
+		class O_NVGoggles_urb_F: O_NVGoggles_ghex_F {};
+		class NVGogglesB_blk_F
+		{
+			price = 4000;
+			show = 1;
+		};
+		class NVGogglesB_grn_F: NVGogglesB_blk_F {};
+		class NVGogglesB_gry_F: NVGogglesB_blk_F {};
 	};
 	
 	// Vests (Light)
@@ -84,12 +99,19 @@ class ShopItems
 		class V_BandollierB_cbr: V_BandollierB_rgr {};
 		class V_BandollierB_blk: V_BandollierB_rgr {};
 		class V_BandollierB_oli: V_BandollierB_rgr {};
+		class V_BandollierB_ghex_F: V_BandollierB_rgr {};
 		class IP_V_BandollierB_snw: V_BandollierB_rgr
 		{
 			merc = 0;
 			show = 0;			
 		};
-		class IP_V_BandollierO_snw: IP_V_BandollierB_snw {};		
+		class IP_V_BandollierO_snw: IP_V_BandollierB_snw {};
+		class V_TacChestrig_cbr_F
+		{
+			price = 750;
+		};
+		class V_TacChestrig_grn_F: V_TacChestrig_cbr_F {};
+		class V_TacChestrig_oli_F: V_TacChestrig_cbr_F {};
 	};
 	
 	// Vests (Medium)
@@ -110,6 +132,7 @@ class ShopItems
 			price = 1500;
 		};	
 		class V_HarnessO_gry: V_HarnessO_brn {};
+		class V_HarnessO_ghex_F: V_HarnessO_brn {};
 		class IP_V_HarnessO_gryST: V_HarnessO_brn
 		{
 			merc = 0;
@@ -120,6 +143,7 @@ class ShopItems
 			price = 1500;
 		};
 		class V_HarnessOGL_gry: V_HarnessOGL_brn {};
+		class V_HarnessOGL_ghex_F: V_HarnessOGL_brn {};
 		class IP_V_HarnessOGL_gryST: V_HarnessOGL_brn
 		{
 			merc = 0;
@@ -144,7 +168,8 @@ class ShopItems
 		class V_TacVest_blk: V_TacVest_khk {};
 		class V_TacVest_camo: V_TacVest_khk {};
 		class V_TacVest_blk_POLICE: V_TacVest_khk {};
-		class V_TacVestCamo_khk: V_TacVest_khk {};		
+		class V_TacVestCamo_khk: V_TacVest_khk {};
+		class V_TacVest_gen_F: V_TacVest_khk {};		
 		class IP_V_TacVest_Police: V_TacVest_khk
 		{
 			merc = 0;
@@ -200,6 +225,8 @@ class ShopItems
 			price = 3000;
 		};	
 		class V_PlateCarrier1_rgr: V_PlateCarrier1_blk {};
+		class V_PlateCarrier1_tna_F: V_PlateCarrier1_blk {};
+		class V_PlateCarrier1_rgr_noflag_F: V_PlateCarrier1_blk {};
 		class IP_V_PlateCarrier1_rgrEF: V_PlateCarrier1_blk {};
 		class IP_V_PlateCarrier1_rgrEFWolf: V_PlateCarrier1_blk {};
 		class IP_V_PlateCarrier1_altisEFWolf: V_PlateCarrier1_blk {};
@@ -229,6 +256,8 @@ class ShopItems
 		{
 			price = 3500;
 		};
+		class V_PlateCarrier2_tna_F: V_PlateCarrier2_rgr {};
+		class V_PlateCarrier2_rgr_noflag_F: V_PlateCarrier2_rgr {};
 		class IP_V_PlateCarrier2_rgrEF: V_PlateCarrier2_rgr {};
 		class IP_V_PlateCarrier2_rgrEFWolf: IP_V_PlateCarrier2_rgrEF {};
 		class IP_V_PlateCarrier2_altisEFWolf: IP_V_PlateCarrier2_rgrEF {};
@@ -306,6 +335,7 @@ class ShopItems
 		};
 		class V_PlateCarrierGL_blk: V_PlateCarrierGL_rgr {};
 		class V_PlateCarrierGL_mtp: V_PlateCarrierGL_rgr {};
+		class V_PlateCarrierGL_tna_F: V_PlateCarrierGL_rgr {};
 		class IP_V_PlateCarrierGL_rgrEF: V_PlateCarrierGL_mtp {};
 		class IP_V_PlateCarrierGL_rgrEFWolf: V_PlateCarrierGL_mtp {};
 		class IP_V_PlateCarrierGL_altisEFWolf: V_PlateCarrierGL_mtp {};
@@ -329,6 +359,7 @@ class ShopItems
 		};
 		class V_PlateCarrierSpec_blk: V_PlateCarrierSpec_rgr {};
 		class V_PlateCarrierSpec_mtp: V_PlateCarrierSpec_rgr {};
+		class V_PlateCarrierSpec_tna_F: V_PlateCarrierSpec_rgr {};
 		class IP_V_PlateCarrierSpec_rgrEF: V_PlateCarrierSpec_mtp {};
 		class IP_V_PlateCarrierSpec_rgrEFWolf: V_PlateCarrierSpec_mtp {};
 		class IP_V_PlateCarrierSpec_altisEFWolf: V_PlateCarrierSpec_mtp {};
@@ -471,7 +502,17 @@ class ShopItems
 		{
 			//description = "Compatible to BIS Glass.";
 			price = 500;
-		};	
+		};
+		class G_Balaclava_TI_blk_F
+		{
+			price = 500;
+		};
+		class G_Balaclava_TI_tna_F: G_Balaclava_TI_blk_F {};
+		class G_Balaclava_TI_G_blk_F
+		{
+			price = 800;
+		};
+		class G_Balaclava_TI_G_tna_F: G_Balaclava_TI_G_blk_F {};
 	};	
 	
 	// Headgear (Soft)
@@ -893,18 +934,28 @@ class ShopItems
 		{
 			price = 1000;
 		};
+		class muzzle_snds_58_wdm_F
+		{
+			price = 1100;
+		};
 		class muzzle_snds_H
 		{
 			price = 1250;
 		};
+		class muzzle_snds_H_khk_F: muzzle_snds_H {};
+		class muzzle_snds_H_snd_F: muzzle_snds_H {};
 		class muzzle_snds_H_MG
 		{
 			price = 1250;
 		};
+		class muzzle_snds_H_MG_khk_F: muzzle_snds_H_MG {};
+		class muzzle_snds_H_MG_blk_F: muzzle_snds_H_MG {};
 		class muzzle_snds_B
 		{
 			price = 1500;
 		};
+		class muzzle_snds_B_snd_F: muzzle_snds_B {};
+		class muzzle_snds_B_khk_F: muzzle_snds_B {};
 		class hlc_muzzle_762SUP_AK
 		{
 			price = 1500;
@@ -925,6 +976,12 @@ class ShopItems
 		{
 			price = 1500;
 		};
+		class muzzle_snds_65_TI_blk_F
+		{
+			price = 2000;
+		};
+		class muzzle_snds_65_TI_ghex_F: muzzle_snds_65_TI_blk_F {};
+		class muzzle_snds_65_TI_hex_F: muzzle_snds_65_TI_blk_F {};
 		class muzzle_snds_338_black
 		{
 			price = 2000;

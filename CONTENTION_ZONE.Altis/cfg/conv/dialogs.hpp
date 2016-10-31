@@ -79,40 +79,40 @@ class rscTitles
 			{
 				idc = -1;
 				text = ""; //--- ToDo: Localize;
-				x = 0.5 * GUI_GRID_W + GUI_GRID_X;
-				y = 19.5 * GUI_GRID_H + GUI_GRID_Y;
-				w = 39 * GUI_GRID_W;
-				h = 4 * GUI_GRID_H;
+				x = 0.244062 * safezoneW + safezoneX;
+				y = 0.724 * safezoneH + safezoneY;
+				w = 0.511875 * safezoneW;
+				h = 0.112 * safezoneH;
 			};
 			
 			////////////////////////////////////////////////////////
-			// GUI EDITOR OUTPUT START (by IndeedPete, v1.063, #Cyvode)
+			// GUI EDITOR OUTPUT START (by IndeedPete, v1.063, #Fylose)
 			////////////////////////////////////////////////////////
 
 			class RscFrame_1800: RscFrame
 			{
 				idc = 1800;
-				x = 0.5 * GUI_GRID_W + GUI_GRID_X;
-				y = 19.5 * GUI_GRID_H + GUI_GRID_Y;
-				w = 39 * GUI_GRID_W;
-				h = 4 * GUI_GRID_H;
+				x = 0.244062 * safezoneW + safezoneX;
+				y = 0.724 * safezoneH + safezoneY;
+				w = 0.511875 * safezoneW;
+				h = 0.112 * safezoneH;
 			};
 			class RscPicture_1200: RscPicture
 			{
 				idc = 1200;
 				text = "#(argb,256,256,1)r2t(camrender0,1.0)";
-				x = 1 * GUI_GRID_W + GUI_GRID_X;
-				y = 20 * GUI_GRID_H + GUI_GRID_Y;
-				w = 5 * GUI_GRID_W;
-				h = 3 * GUI_GRID_H;
+				x = 0.250625 * safezoneW + safezoneX;
+				y = 0.738 * safezoneH + safezoneY;
+				w = 0.065625 * safezoneW;
+				h = 0.084 * safezoneH;
 			};
 			class RscStructuredText_1100: RscStructuredText
 			{
 				idc = 1100;
-				x = 6.5 * GUI_GRID_W + GUI_GRID_X;
-				y = 20 * GUI_GRID_H + GUI_GRID_Y;
-				w = 32.5 * GUI_GRID_W;
-				h = 3 * GUI_GRID_H;
+				x = 0.322812 * safezoneW + safezoneX;
+				y = 0.738 * safezoneH + safezoneY;
+				w = 0.426562 * safezoneW;
+				h = 0.084 * safezoneH;
 			};
 			////////////////////////////////////////////////////////
 			// GUI EDITOR OUTPUT END
@@ -132,75 +132,75 @@ class IP_DLG_CONVERSATION
 		{
 			idc = -1;
 			text = ""; //--- ToDo: Localize;
-			x = 0 * GUI_GRID_W + GUI_GRID_X;
-			y = 0 * GUI_GRID_H + GUI_GRID_Y;
-			w = 40 * GUI_GRID_W;
-			h = 25 * GUI_GRID_H;
+			x = 0.2375 * safezoneW + safezoneX;
+			y = 0.15 * safezoneH + safezoneY;
+			w = 0.525 * safezoneW;
+			h = 0.7 * safezoneH;
 		};
 		
 		////////////////////////////////////////////////////////
-		// GUI EDITOR OUTPUT START (by IndeedPete, v1.063, #Momuqa)
+		// GUI EDITOR OUTPUT START (by IndeedPete, v1.063, #Bogiri)
 		////////////////////////////////////////////////////////
 
 		class IP_FRM_CONVERSATION: RscFrame
 		{
 			idc = 1800;
-			x = 0 * GUI_GRID_W + GUI_GRID_X;
-			y = 0 * GUI_GRID_H + GUI_GRID_Y;
-			w = 40 * GUI_GRID_W;
-			h = 25 * GUI_GRID_H;
+			x = 0.2375 * safezoneW + safezoneX;
+			y = 0.15 * safezoneH + safezoneY;
+			w = 0.525 * safezoneW;
+			h = 0.7 * safezoneH;
 		};
 		class IP_PIC_FIRST: RscPicture
 		{
 			idc = 1200;
 			text = "#(argb,8,8,3)color(1,1,1,1)";
-			x = 1 * GUI_GRID_W + GUI_GRID_X;
-			y = 1 * GUI_GRID_H + GUI_GRID_Y;
-			w = 6 * GUI_GRID_W;
-			h = 4 * GUI_GRID_H;
+			x = 0.250625 * safezoneW + safezoneX;
+			y = 0.178 * safezoneH + safezoneY;
+			w = 0.07875 * safezoneW;
+			h = 0.112 * safezoneH;
 		};
 		class IP_PIC_SECOND: RscPicture
 		{
 			idc = 1201;
 			text = "#(argb,8,8,3)color(1,1,1,1)";
-			x = 33 * GUI_GRID_W + GUI_GRID_X;
-			y = 1 * GUI_GRID_H + GUI_GRID_Y;
-			w = 6 * GUI_GRID_W;
-			h = 4 * GUI_GRID_H;
+			x = 0.670625 * safezoneW + safezoneX;
+			y = 0.178 * safezoneH + safezoneY;
+			w = 0.07875 * safezoneW;
+			h = 0.112 * safezoneH;
 		};
 		class IP_STX_CONVERSATION: RscStructuredText
 		{
 			idc = 1100;
 			text = ""; //--- ToDo: Localize;
-			x = 9 * GUI_GRID_W + GUI_GRID_X;
-			y = 1 * GUI_GRID_H + GUI_GRID_Y;
-			w = 22 * GUI_GRID_W;
-			h = 18 * GUI_GRID_H;
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.178 * safezoneH + safezoneY;
+			w = 0.28875 * safezoneW;
+			h = 0.504 * safezoneH;
 		};
 		class IP_LSB_RESPONSES: RscListbox
 		{
 			idc = 1500;
-			x = 1 * GUI_GRID_W + GUI_GRID_X;
-			y = 20 * GUI_GRID_H + GUI_GRID_Y;
-			w = 38 * GUI_GRID_W;
-			h = 4 * GUI_GRID_H;
+			x = 0.250625 * safezoneW + safezoneX;
+			y = 0.71 * safezoneH + safezoneY;
+			w = 0.49875 * safezoneW;
+			h = 0.112 * safezoneH;
 			onLBSelChanged = "((_this select 0) lbData (_this select 1)) call IP_fnc_selectResponse";
 		};
 		class IP_STX_FIRST: RscStructuredText
 		{
 			idc = 1101;
-			x = 0.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 7.5 * GUI_GRID_W;
-			h = 13.5 * GUI_GRID_H;
+			x = 0.244062 * safezoneW + safezoneX;
+			y = 0.304 * safezoneH + safezoneY;
+			w = 0.0984375 * safezoneW;
+			h = 0.378 * safezoneH;
 		};
 		class IP_STX_SECOND: RscStructuredText
 		{
 			idc = 1102;
-			x = 32 * GUI_GRID_W + GUI_GRID_X;
-			y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 7.5 * GUI_GRID_W;
-			h = 13.5 * GUI_GRID_H;
+			x = 0.6575 * safezoneW + safezoneX;
+			y = 0.304 * safezoneH + safezoneY;
+			w = 0.0984375 * safezoneW;
+			h = 0.378 * safezoneH;
 		};
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END

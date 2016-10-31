@@ -54,7 +54,7 @@ _this spawn {
 	[_transmitterActionParams, "addAction", _ownerGrp] call BIS_fnc_MP;
 
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to bring him a transmitting device. The transmitter is connected to a laptop in a tower at the gate of a decommissioned nuclear power plant at grid " + (mapGridPosition _laptopPos) + ". Locate the transmitter and return it to " + _agentName + "."), "Connections", _agentName], nil, true, 1];
+	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to bring him a transmitting device. The transmitter is connected to a laptop in a tower at the gate of a decommissioned nuclear power plant at grid " + (mapGridPosition _laptopPos) + ". Locate the transmitter and return it to " + _agentName + "."), "Connections", _agentName], nil, true, 1, true, "intel"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;
 	
 	waitUntil {(_ownerGrp getVariable ["IP_M01_TransmitterFound", false]) OR CHECK};

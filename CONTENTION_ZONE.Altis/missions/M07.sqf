@@ -32,7 +32,7 @@ _this spawn {
 	};
 	
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to meet him at the Ghosttown on grid " + (mapGridPosition _agentPos) + ". You will then help him ambushing a " + (getText(missionConfigFile >> 'Factions' >> 'Contention' >> 'displayName')) + " convoy coming from CONTENTION 101."), "Ambush", "Meeting"], _agentPos, true, 1];
+	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to meet him at the Ghosttown on grid " + (mapGridPosition _agentPos) + ". You will then help him ambushing a " + (getText(missionConfigFile >> 'Factions' >> 'Contention' >> 'displayName')) + " convoy coming from CONTENTION 101."), "Ambush", "Meeting"], _agentPos, true, 1, true, "destroy"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;
 	
 	waitUntil {[_owner, 'rivalM07Go'] call IP_fnc_checkConvKey};

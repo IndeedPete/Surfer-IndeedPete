@@ -1,6 +1,6 @@
 // Variables
-IP_TESTMODE = false; // unsterblichkeit etc
-SURF_TestMode = false; // Testmode - ATM just for hazard area markers.
+IP_TESTMODE = true; // unsterblichkeit etc
+SURF_TestMode = true; // Testmode - ATM just for hazard area markers.
 SurfersOldFog = [0.35,0.02,0];
 initDate = date;
 SurfersTransitionTime = 5 * 60;

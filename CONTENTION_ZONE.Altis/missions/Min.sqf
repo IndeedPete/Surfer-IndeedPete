@@ -24,13 +24,13 @@ _this spawn {
 	_task = "t" + _mission;
 	_subTasks = [(_task + "BIO"), (_task + "CHEM"), (_task + "RAD"), (_task + "FREEZER"), (_task + "BLASTER"), (_task + "TRIP")];
 	_taskParams = [
-		[_ownerGrp, _task, [(_agentName + " wants you to scan the anomalies BIO, CHEM, RAD, FREEZER, BLASTER and TRIP! Enter a safe zone of an anomaly to scan it! Explore the area around Sufer's Scrapyard to find the anomalies! Return to " + _agentName + " when you're done!"), "Scan Anomalies", _agentName], nil, true, 1],
-		[_ownerGrp, [(_subTasks select 0), _task], ["Scan a BIO anomaly!", "BIO", ""], nil, false, 1],
-		[_ownerGrp, [(_subTasks select 1), _task], ["Scan a CHEM anomaly!", "CHEM", ""], nil, false, 1],
-		[_ownerGrp, [(_subTasks select 2), _task], ["Scan a RAD anomaly!", "RAD", ""], nil, false, 1],
-		[_ownerGrp, [(_subTasks select 3), _task], ["Scan a FREEZER anomaly!", "FREEZER", ""], nil, false, 1],
-		[_ownerGrp, [(_subTasks select 4), _task], ["Scan a BLASTER anomaly!", "BLASTER", ""], nil, false, 1],
-		[_ownerGrp, [(_subTasks select 5), _task], ["Scan a TRIP anomaly!", "TRIP", ""], nil, false, 1]
+		[_ownerGrp, _task, [(_agentName + " wants you to scan the anomalies BIO, CHEM, RAD, FREEZER, BLASTER and TRIP! Enter a safe zone of an anomaly to scan it! Explore the area around Sufer's Scrapyard to find the anomalies! Return to " + _agentName + " when you're done!"), "Scan Anomalies", _agentName], nil, true, 1, true, "radio"],
+		[_ownerGrp, [(_subTasks select 0), _task], ["Scan a BIO anomaly!", "BIO", ""], nil, false, 1, false, "B"],
+		[_ownerGrp, [(_subTasks select 1), _task], ["Scan a CHEM anomaly!", "CHEM", ""], nil, false, 1, false, "C"],
+		[_ownerGrp, [(_subTasks select 2), _task], ["Scan a RAD anomaly!", "RAD", ""], nil, false, 1, false, "R"],
+		[_ownerGrp, [(_subTasks select 3), _task], ["Scan a FREEZER anomaly!", "FREEZER", ""], nil, false, 1, false, "F"],
+		[_ownerGrp, [(_subTasks select 4), _task], ["Scan a BLASTER anomaly!", "BLASTER", ""], nil, false, 1, false, "B"],
+		[_ownerGrp, [(_subTasks select 5), _task], ["Scan a TRIP anomaly!", "TRIP", ""], nil, false, 1, false, "T"]
 	];
 	{[_x, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP} forEach _taskParams;
 	

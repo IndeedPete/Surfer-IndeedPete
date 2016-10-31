@@ -13,7 +13,7 @@ _this spawn {
 	_ownerGrp setVariable ["IP_MMechNeed_Started", true, true];
 
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [("Bring a Toolkit to " + _agentName + " and receive " + _rewardStr + " Euro."), "Mechanic In Need", _agentName], _agentPos, true, 1],
+	_taskParams = [_ownerGrp, _task, [("Bring a Toolkit to " + _agentName + " and receive " + _rewardStr + " Euro."), "Mechanic In Need", _agentName], _agentPos, true, 1, true, "repair"],
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;	
 		
 	waitUntil {(_ownerGrp getVariable ["IP_MMechNeed_QuestDone", false]) OR CHECK};

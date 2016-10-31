@@ -70,7 +70,7 @@ _this spawn {
 	IP_M06_Box addMagazineCargoGlobal ["SmokeShell", (_count * 2)];
 	
 	_task = "t" + _mission;
-	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to raid the " + (getText(missionConfigFile >> 'Factions' >> 'Contention' >> 'displayName')) + " Depot 57 on grid " + (mapGridPosition(getMarkerPos _marker)) + " for supplies. Return to " + _agentName + " at Surfer's Scrapyard on grid " + (mapGridPosition _agentPos) + " once you're done."), "Depot 57", "Depot 57"], _marker, true, 1];
+	_taskParams = [_ownerGrp, _task, [(_agentName + " wants you to raid the " + (getText(missionConfigFile >> 'Factions' >> 'Contention' >> 'displayName')) + " Depot 57 on grid " + (mapGridPosition(getMarkerPos _marker)) + " for supplies. Return to " + _agentName + " at Surfer's Scrapyard on grid " + (mapGridPosition _agentPos) + " once you're done."), "Depot 57", "Depot 57"], _marker, true, 1, true, "rifle"];
 	[_taskParams, "BIS_fnc_taskCreate", _ownerGrp] call BIS_fnc_MP;
 	
 	waitUntil {IP_M06_Box_Opened};
