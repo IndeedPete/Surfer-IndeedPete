@@ -564,7 +564,8 @@ class ShopItems
 		class H_Booniehat_mcamo: H_Booniehat_khk {};
 		class H_Booniehat_grn: H_Booniehat_khk {};
 		class H_Booniehat_tan: H_Booniehat_khk {};
-		class H_Booniehat_dirty: H_Booniehat_khk {};		
+		class H_Booniehat_dirty: H_Booniehat_khk {};
+		class H_Booniehat_tna_F: H_Booniehat_khk {};
 		class IP_H_Booniehat_mcamoEFAltis: H_Booniehat_mcamo {};
 		class IP_H_Booniehat_mcamoEFBlack: H_Booniehat_khk {};
 		class IP_H_Booniehat_mcamoEFDesert: H_Booniehat_mcamo {};
@@ -650,6 +651,9 @@ class ShopItems
 			merc = 0;
 		};
 		class H_MilCap_mcamo: H_MilCap_ocamo {};
+		class H_MilCap_ghex_F: H_MilCap_ocamo {};
+		class H_MilCap_tna_F: H_MilCap_ocamo {};
+		class H_MilCap_gen_F: H_MilCap_ocamo {};
 		class H_MilCap_oucamo: H_MilCap_ocamo
 		{
 			show = 1;
@@ -694,6 +698,7 @@ class ShopItems
 		class H_Beret_grn: H_Beret_blk {};
 		class H_Beret_grn_SF: H_Beret_blk {};
 		class H_Beret_brn_SF: H_Beret_blk {};
+		class H_Beret_gen_F: H_Beret_blk {};
 		class H_Beret_02
 		{
 			merc = 0;
@@ -723,6 +728,10 @@ class ShopItems
 		basePrice = 1000;
 		displayName = "Headgear (Combat)";
 		
+		class H_Helmet_Skate
+		{
+			price = 500;
+		};
 		class H_HelmetB_light
 		{
 			price = 1000;
@@ -731,7 +740,8 @@ class ShopItems
 		class H_HelmetB_light_snakeskin: H_HelmetB_light {};
 		class H_HelmetB_light_desert: H_HelmetB_light {};
 		class H_HelmetB_light_black: H_HelmetB_light {};
-		class H_HelmetB_light_sand: H_HelmetB_light {};		
+		class H_HelmetB_light_sand: H_HelmetB_light {};
+		class H_HelmetB_Light_tna_F: H_HelmetB_light {};
 		class IP_H_HelmetB_light_Black: H_HelmetB_light {};
 		class IP_H_HelmetB_light_Black_Digi: H_HelmetB_light {};
 		class IP_H_HelmetB_light_khaki: H_HelmetB_light {};
@@ -779,6 +789,7 @@ class ShopItems
 		class H_HelmetB_plain_blk: H_HelmetB {};
 		class H_HelmetB_camo: H_HelmetB {};
 		class H_HelmetB_paint: H_HelmetB {};
+		class H_HelmetB_tna_F: H_HelmetB {};
 		class IP_H_HelmetB_Black: H_HelmetB {};
 		class IP_H_HelmetB_Black_Digi: H_HelmetB {};
 		class IP_H_HelmetB_khaki: H_HelmetB_plain_mcamo {};
@@ -800,6 +811,7 @@ class ShopItems
 		class H_HelmetSpecB_paint1: H_HelmetSpecB {};
 		class H_HelmetSpecB_paint2: H_HelmetSpecB {};
 		class H_HelmetSpecB_blk: H_HelmetSpecB {};
+		class H_HelmetB_Enh_tna_F: H_HelmetSpecB {};
 		class IP_H_HelmetSpecB_Black: H_HelmetSpecB {};
 		class IP_H_HelmetSpecB_Black_Digi: H_HelmetSpecB {};
 		class IP_H_HelmetSpecB_khaki: H_HelmetSpecB {};
@@ -821,6 +833,7 @@ class ShopItems
 			show = 0;
 		};
 		class H_HelmetO_oucamo: H_HelmetO_ocamo {};
+		class H_HelmetO_ghex_F: H_HelmetO_ocamo {};
 		class IP_H_HelmetO_SnowTiger: H_HelmetO_ocamo {};
 		class IP_H_HelmetO_SnowHex: H_HelmetO_ocamo {};
 		class H_HelmetLeaderO_ocamo
@@ -830,6 +843,7 @@ class ShopItems
 			show = 0;
 		};
 		class H_HelmetLeaderO_oucamo: H_HelmetLeaderO_ocamo {};
+		class H_HelmetLeaderO_ghex_F: H_HelmetLeaderO_ocamo {};
 		class IP_H_HelmetLeaderO_SnowTiger: H_HelmetLeaderO_ocamo {};
 		class IP_H_HelmetLeaderO_SnowHex: H_HelmetLeaderO_ocamo {};
 		class H_HelmetSpecO_ocamo
@@ -839,8 +853,13 @@ class ShopItems
 			show = 0;
 		};
 		class H_HelmetSpecO_blk: H_HelmetSpecO_ocamo {};
+		class H_HelmetSpecO_ghex_F: H_HelmetSpecO_ocamo {};
 		class IP_H_HelmetSpecO_SnowTiger: H_HelmetSpecO_ocamo {};
 		class IP_H_HelmetSpecO_SnowHex: H_HelmetSpecO_ocamo {};
+		class H_HelmetB_TI_tna_F
+		{
+			price = 3500;
+		};
 	};
 	
 	// Headgear (Special)
@@ -870,6 +889,7 @@ class ShopItems
 		};
 		class H_HelmetCrew_I: H_HelmetCrew_B {};
 		class H_HelmetCrew_O: H_HelmetCrew_B {};
+		class H_HelmetCrew_O_ghex_F: H_HelmetCrew_B {};
 		class IP_H_HelmetCrew_O_Snow: H_HelmetCrew_B {};		
 		class H_PilotHelmetHeli_B
 		{
@@ -1203,6 +1223,7 @@ class ShopItems
 		class B_AssaultPack_cbr: B_AssaultPack_khk {};
 		class B_AssaultPack_mcamo: B_AssaultPack_khk {};
 		class B_AssaultPack_ocamo: B_AssaultPack_khk {};
+		class B_AssaultPack_tna_F: B_AssaultPack_khk {};
 		class IP_B_AssaultPack_SnowHex: B_AssaultPack_khk 
 		{
 			merc = 0;
@@ -1218,6 +1239,7 @@ class ShopItems
 		class B_FieldPack_oucamo: B_FieldPack_khk {};
 		class B_FieldPack_cbr: B_FieldPack_khk {};
 		class B_FieldPack_blk: B_FieldPack_khk {};
+		class B_FieldPack_ghex_F: B_FieldPack_khk {};
 		class IP_B_Fieldpack_blue: B_FieldPack_khk {};
 		class IP_B_FieldPack_SnowHex: B_FieldPack_khk
 		{
@@ -1255,7 +1277,8 @@ class ShopItems
 		class B_Carryall_oucamo: B_Carryall_ocamo {};
 		class B_Carryall_mcamo: B_Carryall_ocamo {};
 		class B_Carryall_khk: B_Carryall_ocamo {};
-		class B_Carryall_cbr: B_Carryall_ocamo {};		
+		class B_Carryall_cbr: B_Carryall_ocamo {};	
+		class B_Carryall_ghex_F: B_Carryall_ocamo {};		
 		class IP_B_Carryall_blue: B_Carryall_ocamo {};
 		class IP_B_Carryall_SnowHex: B_Carryall_ocamo
 		{
@@ -1265,6 +1288,29 @@ class ShopItems
 		class IP_B_Carryall_SnowTiger: IP_B_Carryall_SnowHex {};
 		class IP_B_Carryall_blk: B_Carryall_ocamo {};
 		class IP_B_Carryall_snw: IP_B_Carryall_SnowHex {};
+		class B_ViperLightHarness_khk_F
+		{
+			price = 3000;
+		};
+		class B_ViperLightHarness_blk_F: B_ViperLightHarness_khk_F {};
+		class B_ViperLightHarness_hex_F: B_ViperLightHarness_khk_F {};
+		class B_ViperLightHarness_oli_F: B_ViperLightHarness_khk_F {};
+		class B_ViperLightHarness_ghex_F: B_ViperLightHarness_khk_F {};
+		class B_ViperHarness_oli_F
+		{
+			price = 3500;
+		};
+		class B_ViperHarness_khk_F: B_ViperHarness_oli_F {};
+		class B_ViperHarness_ghex_F: B_ViperHarness_oli_F {};
+		class B_ViperHarness_hex_F: B_ViperHarness_oli_F {};
+		class B_ViperHarness_blk_F: B_ViperHarness_oli_F {};
+		class B_Bergen_tna_F
+		{
+			price = 4000;
+		};
+		class B_Bergen_hex_F: B_Bergen_tna_F {};
+		class B_Bergen_dgtl_F: B_Bergen_tna_F {};
+		class B_Bergen_mcamo_F: B_Bergen_tna_F {};
 	};
 	
 	// Backpacks Parachutes

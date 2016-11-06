@@ -23,7 +23,16 @@ class ShopUniforms
 		class U_C_Commoner_shorts: U_C_Poloshirt_blue {};
 		class U_C_ShirtSurfer_shorts: U_C_Poloshirt_blue {};
 		class U_C_TeeSurfer_shorts_1: U_C_Poloshirt_blue {};
-		class U_C_TeeSurfer_shorts_2: U_C_Poloshirt_blue {};
+		class U_C_TeeSurfer_shorts_2: U_C_Poloshirt_blue {};		
+		class U_C_man_sport_1_F: U_C_Poloshirt_blue {};
+		class U_C_man_sport_2_F: U_C_Poloshirt_blue {};
+		class U_C_man_sport_3_F: U_C_Poloshirt_blue {};
+		class U_C_Man_casual_1_F: U_C_Poloshirt_blue {};
+		class U_C_Man_casual_2_F: U_C_Poloshirt_blue {};
+		class U_C_Man_casual_3_F: U_C_Poloshirt_blue {};
+		class U_C_Man_casual_4_F: U_C_Poloshirt_blue {};
+		class U_C_Man_casual_5_F: U_C_Poloshirt_blue {};
+		class U_C_Man_casual_6_F: U_C_Poloshirt_blue {};		
 		class U_C_Poor_1
 		{
 			description = "Old Blue T-Shirt, Dark Cargo Pants with Holes in Pockets, and Undersized Boots";
@@ -112,6 +121,14 @@ class ShopUniforms
 		{
 			price = 200;
 		};
+		class U_I_C_Soldier_Para_1_F
+		{
+			price = 200;
+		};
+		class U_I_C_Soldier_Para_2_F: U_I_C_Soldier_Para_1_F {};
+		class U_I_C_Soldier_Para_3_F: U_I_C_Soldier_Para_1_F {};
+		class U_I_C_Soldier_Para_4_F: U_I_C_Soldier_Para_1_F {};
+		class U_I_C_Soldier_Para_5_F: U_I_C_Soldier_Para_1_F {};
 		class U_BG_Guerilla1_1
 		{
 			price = 300;
@@ -140,10 +157,15 @@ class ShopUniforms
 		{
 			price = 300;
 		};
+		class U_B_GEN_Soldier_F
+		{
+			price = 300;
+		};
 		class U_BG_Guerrilla_6_1
 		{
 			price = 300;
 		};
+		class U_B_GEN_Commander_F: U_BG_Guerrilla_6_1 {};
 		class IP_U_BG_Guerrilla_6_1Police: U_BG_Guerrilla_6_1
 		{
 			merc = 0;
@@ -164,7 +186,19 @@ class ShopUniforms
 			show = 0;
 		};
 		class IP_U_BG_leader_USSnowFinnish: IP_U_BG_leader_WoodTriangleBW {};
-		class IP_U_BG_leader_WoodSwedishSS: IP_U_BG_leader_WoodTriangleBW {}; 
+		class IP_U_BG_leader_WoodSwedishSS: IP_U_BG_leader_WoodTriangleBW {};
+		class U_I_C_Soldier_Bandit_1_F
+		{
+			price = 300;
+		};
+		class U_I_C_Soldier_Bandit_2_F: U_I_C_Soldier_Bandit_1_F {};
+		class U_I_C_Soldier_Bandit_3_F: U_I_C_Soldier_Bandit_1_F {};
+		class U_I_C_Soldier_Bandit_4_F: U_I_C_Soldier_Bandit_1_F {};
+		class U_I_C_Soldier_Bandit_5_F: U_I_C_Soldier_Bandit_1_F {};
+		class U_I_C_Soldier_Camo_F
+		{
+			price = 300;
+		};
 	};
 	
 	class Military
@@ -204,6 +238,7 @@ class ShopUniforms
 		{
 			price = 500;
 		};
+		class U_B_T_Soldier_AR_F: U_B_CombatUniform_mcam_tshirt {};
 		class IP_U_B_CombatUniform_mcam_tshirt_EFAltis: U_B_CombatUniform_mcam_tshirt {};
 		class IP_U_B_CombatUniform_mcam_tshirt_EFDesert: U_B_CombatUniform_mcam_tshirt {};
 		class U_I_G_Story_Protagonist_F
@@ -215,6 +250,8 @@ class ShopUniforms
 			price = 750;
 		};
 		class U_B_CombatUniform_mcam_vest: U_B_CombatUniform_mcam {};
+		class U_B_T_Soldier_F: U_B_CombatUniform_mcam {};
+		class U_B_T_Soldier_SL_F: U_B_CombatUniform_mcam {};
 		class IP_U_B_CombatUniform_mcam_EFBlackWolf: U_B_CombatUniform_mcam {};
 		class IP_U_B_CombatUniform_mcam_vest_EFBlackWolf: U_B_CombatUniform_mcam {};
 		class IP_U_B_CombatUniform_mcam_EFAltis: U_B_CombatUniform_mcam {};
@@ -290,6 +327,18 @@ class ShopUniforms
 			price = 750;
 		};
 		class U_B_CTRG_3: U_B_CTRG_1 {};
+		class U_B_CTRG_Soldier_F
+		{
+			price = 1500;
+		};
+		class U_B_CTRG_Soldier_2_F: U_B_CTRG_Soldier_F {};
+		class U_B_CTRG_Soldier_3_F: U_B_CTRG_Soldier_F {};
+		class U_B_CTRG_Soldier_urb_1_F
+		{
+			price = 1500;
+		};
+		class U_B_CTRG_Soldier_urb_2_F: U_B_CTRG_Soldier_urb_1_F {};
+		class U_B_CTRG_Soldier_urb_3_F: U_B_CTRG_Soldier_urb_1_F {};
 		class U_O_CombatUniform_ocamo
 		{
 			merc = 0;
@@ -298,6 +347,7 @@ class ShopUniforms
 			show = 0;
 		};
 		class U_O_CombatUniform_oucamo: U_O_CombatUniform_ocamo {};
+		class U_O_T_Soldier_F: U_O_CombatUniform_ocamo {};
 		class IP_U_O_CombatUniform_SnowTiger: U_O_CombatUniform_ocamo {};
 		class IP_U_O_CombatUniform_SnowHex: U_O_CombatUniform_ocamo {};
 		class IP_U_O_CombatUniform_BA: U_O_CombatUniform_ocamo {};
@@ -307,6 +357,7 @@ class ShopUniforms
 			show = 0;
 			zombieTexture = "images\OpforClothing_GreyZombie7.paa";
 		};
+		class U_O_T_Officer_F: U_O_OfficerUniform_ocamo {};
 		class IP_U_O_OfficerUniform_SnowTiger: U_O_OfficerUniform_ocamo {};
 		class IP_U_O_OfficerUniform_SnowHex: U_O_OfficerUniform_ocamo {};
 	};
@@ -355,6 +406,8 @@ class ShopUniforms
 		class U_B_FullGhillie_lsh: U_B_GhillieSuit {};
 		class U_B_FullGhillie_sard: U_B_GhillieSuit {};
 		class U_B_FullGhillie_ard: U_B_GhillieSuit {};
+		class U_B_T_Sniper_F: U_B_GhillieSuit {};
+		class U_B_T_FullGhillie_tna_F: U_B_GhillieSuit {};
 		class U_O_GhillieSuit
 		{
 			price = 1250;
@@ -363,6 +416,8 @@ class ShopUniforms
 		class U_O_FullGhillie_lsh: U_O_GhillieSuit {};
 		class U_O_FullGhillie_sard: U_O_GhillieSuit {};
 		class U_O_FullGhillie_ard: U_O_GhillieSuit {};
+		class U_O_T_Sniper_F: U_O_GhillieSuit {};
+		class U_O_T_FullGhillie_tna_F: U_O_GhillieSuit {};
 		class U_B_pilotCoveralls
 		{
 			price = 2500;
@@ -378,5 +433,11 @@ class ShopUniforms
 		};
 		class U_O_Protagonist_VR: U_B_Protagonist_VR {};
 		class U_I_Protagonist_VR: U_B_Protagonist_VR {};
+		class U_O_V_Soldier_Viper_F
+		{
+			price = 5000;
+			show = 0;
+		};
+		class U_O_V_Soldier_Viper_hex_F: U_O_V_Soldier_Viper_F {};
 	};
 };

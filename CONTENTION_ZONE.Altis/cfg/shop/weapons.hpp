@@ -935,6 +935,11 @@ class ShopWeapons
 		basePrice = 9000;
 		displayName = "Launchers";
 		
+		class launch_RPG7_F
+		{
+			origin = "Russia";
+			price = 7500;
+		};
 		class launch_RPG32_F
 		{
 			origin = "Iran";

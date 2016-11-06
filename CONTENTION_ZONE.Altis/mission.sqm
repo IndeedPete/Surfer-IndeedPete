@@ -18197,7 +18197,7 @@ class Mission
 			};
 			id=995;
 			type="Land_Cargo20_grey_F";
-			atlOffset=0.0016336441;
+			atlOffset=0.0015726089;
 		};
 		class Item989
 		{
